@@ -1,0 +1,14 @@
+00= regular
+01= Bold
+02= Italic
+03= Bold/Italic
+04= Underlined
+05= Bold/Underlined
+06= Italic/Underlined
+07= Bold/Italic/Underlined
+08= StrikeOut
+09= Bold/StrikeOut
+10= Italic/StrikeOut
+11= Bold/Italic/StrikeOut
+12= Underlined/StrikeOut
+13= Bold/Underlined/StrikeOut

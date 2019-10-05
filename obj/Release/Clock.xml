@@ -1,0 +1,199 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Clock
+</name>
+</assembly>
+<members>
+<member name="T:Clock.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Clock.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Clock.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Clock.My.Resources.Resources.Clock_9">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:Clock.My.Resources.Resources.Clock_Alert">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="T:Clock.SectionDoesNotExistException">
+ <summary>
+ This exception is thrown whenever the specified section does not exist.
+ </summary>
+</member>
+<member name="T:Clock.FieldDoesNotExistException">
+ <summary>
+ This exception is thrown whenever the specified field inside a section does not exist.
+ </summary>
+</member>
+<member name="T:Clock.Item">
+ <summary>
+ This structure contains the INI data read from the file.
+ </summary>
+</member>
+<member name="P:Clock.Item.Field">
+ <summary>
+ The field name of this item.
+ </summary>
+</member>
+<member name="P:Clock.Item.Value">
+ <summary>
+ The value of the object.
+ 
+ The type of value will either be:
+ 1) String
+ 2) Boolean
+ 3) Decimal
+ </summary>
+</member>
+<member name="T:Clock.Ini">
+ <summary>
+ An easy to use, managed class to create, read, write, and modify INI files.
+ </summary>
+</member>
+<member name="P:Clock.Ini.Items">
+ <summary>
+ Internal use, used for making sure sections and their respective items are kept organized.
+ </summary>
+</member>
+<member name="P:Clock.Ini.Sections">
+ <summary>
+ Get the different sections in the INI file.
+ </summary>
+</member>
+<member name="M:Clock.Ini.#ctor">
+ <summary>
+ Creates a new INI class.
+ </summary>
+</member>
+<member name="P:Clock.Ini.Item(System.String)">
+ <summary>
+ A public accessor to retrieve items based on their section
+ </summary>
+ <param name="name"></param>
+ <returns></returns>
+</member>
+<member name="M:Clock.Ini.Add(System.String)">
+ <summary>
+ Adds a new section to the INI file.
+ </summary>
+ <param name="section">The name of the section to add.</param>
+</member>
+<member name="M:Clock.Ini.Add(System.String,System.String,System.Object)">
+ <summary>
+ Adds a new field to the INI file.
+ </summary>
+ <param name="section">The section to add the field under.</param>
+ <param name="field">The name of the field.</param>
+ <param name="value">The value to add. The value must be either a number, a boolean, or a string.</param>
+</member>
+<member name="M:Clock.Ini.Remove(System.String)">
+ <summary>
+ Removes a section from the INI file.
+ </summary>
+ <param name="section">The name of the section to remove.</param>
+</member>
+<member name="M:Clock.Ini.Remove(System.String,System.String)">
+ <summary>
+ Removes a field from a specified section in the INI file.
+ </summary>
+ <param name="section">The name of the section to look under.</param>
+ <param name="field">The name of the field to remove.</param>
+</member>
+<member name="M:Clock.Ini.SectionExists(System.String)">
+ <summary>
+ Checks to see if a section exists.
+ </summary>
+ <param name="section">The name of the section to check.</param>
+ <returns>Boolean</returns>
+</member>
+<member name="M:Clock.Ini.FieldExists(System.String,System.String)">
+ <summary>
+ Checks to see if a field inside of a section exists.
+ </summary>
+ <param name="section">The name of the section to check under.</param>
+ <param name="field">The name of the field to look for.</param>
+ <returns>Boolean</returns>
+</member>
+<member name="M:Clock.Ini.GetField(System.String,System.String)">
+ <summary>
+ Returns the value of a field in the specified section.
+ </summary>
+ <param name="section">The specified section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <returns>Object</returns>
+</member>
+<member name="M:Clock.Ini.GetBooleanField(System.String,System.String)">
+ <summary>
+ Returns the value of a field in the specified section as a boolean
+ </summary>
+ <param name="section">The specified section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <returns>Boolean</returns>
+</member>
+<member name="M:Clock.Ini.GetNumberField(System.String,System.String)">
+ <summary>
+ Returns the value of a field in the specified section as a decimal.
+ </summary>
+ <param name="section">The specified section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <returns>Decimal</returns>
+</member>
+<member name="M:Clock.Ini.GetStringField(System.String,System.String)">
+ <summary>
+ Returns the value of a field in the specified section as a string.
+ </summary>
+ <param name="section">The specified section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <returns>String</returns>
+</member>
+<member name="M:Clock.Ini.SetField(System.String,System.String,System.Object)">
+ <summary>
+ Sets the value of the specified field.
+ </summary>
+ <param name="section">The section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <param name="value">The value to set.</param>
+</member>
+<member name="M:Clock.Ini.SetBooleanField(System.String,System.String,System.Boolean)">
+ <summary>
+ Sets the value of the specified field to a boolean value.
+ </summary>
+ <param name="section">The section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <param name="value">The value to set.</param>
+</member>
+<member name="M:Clock.Ini.SetNumberField(System.String,System.String,System.Decimal)">
+ <summary>
+ Sets the value of the specified field to a numerical value.
+ </summary>
+ <param name="section">The section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <param name="value">The value to set.</param>
+</member>
+<member name="M:Clock.Ini.SetStringField(System.String,System.String,System.String)">
+ <summary>
+ Sets the value of the specified field to a string value.
+ </summary>
+ <param name="section">The section to look under.</param>
+ <param name="field">The field to look for.</param>
+ <param name="value">The value to set.</param>
+</member>
+</members>
+</doc>
